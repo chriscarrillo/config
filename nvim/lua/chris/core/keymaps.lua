@@ -2,21 +2,15 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-keymap.set("i", "kj", "<ESC>", { desc = "Exit insert mode with kj" })
+keymap.set({ "i", "v" }, "kj", "<ESC>", { desc = "Exit mode with kj" })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
--- keymap.set("", "", "", { desc = "" })
 keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save file" })
-keymap.set("n", "<leader>q", ":q<CR>", { desc = "Close file" })
+keymap.set("n", "<leader>q", ":bd|b#<CR>", { desc = "Close buffer and go to previous" })
+keymap.set("n", "<Tab>", ":bnext<CR>", { desc = "Next buffer" })
+keymap.set("n", "<S-Tab>", ":bprev<CR>", { desc = "Previous buffer" })
 
-keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) 
+keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
 keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
-
-keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
-keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" })
-keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
-keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
-keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
-

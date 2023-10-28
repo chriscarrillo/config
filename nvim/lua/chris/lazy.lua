@@ -15,9 +15,6 @@ require("lazy").setup({
   {import = "chris.plugins"},
   {import = "chris.plugins.lsp"},
 }, {
-  install = {
-    colorscheme = { "nightfly" },
-  },
   checker = {
     enabled = true,
     notify = false,
@@ -26,4 +23,3 @@ require("lazy").setup({
     notify = false,
   },
 })
-

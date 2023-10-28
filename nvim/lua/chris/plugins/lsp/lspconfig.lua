@@ -70,10 +70,24 @@ return {
       on_attach = on_attach,
     })
 
+    lspconfig["dartls"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
     lspconfig["emmet_ls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      filetypes = { "html", "typescriptreact", "javascript", "javascriptreact", "vue", "css", "sass", "scss" },
+      filetypes = {
+				"css",
+				"html",
+				"javascript",
+				"javascriptreact",
+				"sass",
+				"scss",
+				"typescriptreact",
+				"vue",
+			},
     })
 
     lspconfig["html"].setup({
@@ -82,21 +96,6 @@ return {
     })
 
     lspconfig["jsonls"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
-    lspconfig["tailwindcss"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
-    lspconfig["tsserver"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
-    lspconfig["volar"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })
@@ -120,6 +119,26 @@ return {
           },
         },
       },
+    })
+
+		lspconfig["rust_analyzer"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+    lspconfig["tailwindcss"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+    lspconfig["tsserver"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+    lspconfig["volar"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
     })
   end,
 }
