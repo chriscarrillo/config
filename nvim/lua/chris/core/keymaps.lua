@@ -7,6 +7,7 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save file" })
 keymap.set("n", "<leader>q", ":bd|b#<CR>", { desc = "Close buffer and go to previous" })
+keymap.set("n", "<leader>Q", ":qa!<CR>", { desc = "Quit all without saving" })
 keymap.set("n", "<Tab>", ":bnext<CR>", { desc = "Next buffer" })
 keymap.set("n", "<S-Tab>", ":bprev<CR>", { desc = "Previous buffer" })
 
@@ -14,3 +15,9 @@ keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
 keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
 keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
+
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
+
+keymap.set("v", "<leader>p", '"_dP', { desc = "Paste from register but don't replace" })
+keymap.set("v", "<leader>p", '"_dP', { desc = "Paste from register but don't replace" })

@@ -21,10 +21,17 @@ return {
 
 		mason_lspconfig.setup({
 			ensure_installed = {
+				"asm_lsp",
+				"clangd",
 				"cssls",
 				"emmet_ls",
 				"html",
+				"jsonls",
 				"lua_ls",
+				"pylsp",
+				"pyright",
+				"rust_analyzer",
+				"slint_lsp",
 				"tailwindcss",
 				"tsserver",
 			},
@@ -33,6 +40,8 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
+				"black",
+				"clang-format",
 				"eslint_d",
 				"prettier",
 				"stylua",

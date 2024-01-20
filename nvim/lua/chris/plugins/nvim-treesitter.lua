@@ -9,6 +9,12 @@ return {
 		},
 		config = function()
 			local treesitter = require("nvim-treesitter.configs")
+			require("ts_context_commentstring").setup({
+				enable_autocmd = false,
+				languages = {
+					typescript = "// %s",
+				},
+			})
 
 			treesitter.setup({
 				highlight = {
@@ -22,7 +28,6 @@ return {
 				ensure_installed = {
 					"comment",
 					"css",
-					"dart",
 					"dockerfile",
 					"gitignore",
 					"html",
@@ -35,15 +40,12 @@ return {
 					"regex",
 					"rust",
 					"scss",
+					"slint",
 					"tsx",
 					"typescript",
 					"vim",
 					"vue",
 					"yaml",
-				},
-				context_commentstring = {
-					enable = true,
-					enable_autocmd = false,
 				},
 				auto_install = true,
 			})
